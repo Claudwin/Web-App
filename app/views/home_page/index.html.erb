@@ -1,5 +1,25 @@
 <h1>Simple Web App to Display My Favorite Books</h1>
-
 <p>Created using rails and hosted on github & heroku<p>
+<%= link_to 'Add Book', new_book_path, class: 'badge badge-info' %>
+<br/>
 
-<h1><%= @books.inspect %></h1>
+
+
+<% @books.each do |book| %>
+
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= book.title %></h5>
+      <p class="card-text">
+        Author: <%= book.author %>
+        <br/>
+        <%= book.description %>
+      </p>
+      <p class="card-text"><small class="text-muted"><%= book.created_at %></small></p>
+    </div>
+ 
+
+  <hr />
+<% end %>
+
