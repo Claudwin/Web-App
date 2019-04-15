@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+ <%= simple_form_for @book do |f| %>
+<div class="container">
+    <hr>
+    <div class="col row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <header class="card-header">
+
+                    <%= f.error_notification %>
+                    <h4 class="card-title mt-2">Add A New Book</h4>
+                </header>
+                <article class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col form-group">
+                            </div>
+                        </div> <!-- form-row.// -->
+                        <div class="form-row">
+                            <div class="col form-group">
+                              <%= f.input :title %>
+                            </div> <!-- form-group end.// -->
+                        </div> <!-- form-row end.// -->
+                        <div class="form-row">
+                        </div> <!-- form-row.// -->
+                        <div class="col form-group">
+                           <%= f.input :description %>
+                        </div> <!-- form-group end.// -->
+                        <div class="form-row">
+                        </div> <!-- form-row.// -->
+                        <div class="col form-group">
+                           <%= f.input :author %>
+                        </div> <!-- form-group end.// -->
+                        <div class="col form-group">
+                            <%= f.button :submit, "Add Book",  class:"btn btn-primary " %>
+                            <small class="col text-muted">By clicking 'Sign Up' you accept our Terms of use and Privacy
+                                Policy.</small>
+                        </div> <!-- form-group// -->
+                    </form>
+                </article> <!-- card-body end .// -->
+                
+    <% end %>
+</div> <!--container end.//-->
+<br><br>
